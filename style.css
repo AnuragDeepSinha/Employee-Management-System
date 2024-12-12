@@ -1,0 +1,193 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #d4f5d4; /* Light green background for the entire page */
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient for a vibrant effect */
+    padding: 1rem;
+    color: white;
+    position: relative;
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* WhatsApp profile size */
+    height: 50px;
+    border-radius: 50%; /* Circular shape */
+    background-color: #fff; /* White background for contrast */
+    border: 2px solid #ff7e5f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff7e5f; /* Matches header gradient */
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+}
+
+/* Search Bar */
+#search-bar {
+    padding: 0.5rem;
+    border-radius: 20px;
+    border: none;
+    width: 250px;
+    font-size: 16px;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    font-size: 30px;
+    color: #ff7e5f;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 70px; /* Place below the search bar */
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+    justify-content: center; /* Center-align the navigation */
+    background-color: #ff7e5f;
+    padding: 10px;
+    width: 100%;
+    position: sticky;
+    top: 120px; /* Position below the hamburger menu */
+}
+
+.nav-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-menu li:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #ecf0f1;
+}
+
+/* Form and Listing Containers */
+.form-container, .listing-container {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    background-color: #ff7e5f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #feb47b;
+}
+
+/* Footer */
+.footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #ff7e5f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.pagination button:hover {
+    background-color: #feb47b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Hide the navigation menu items by default */
+    .nav-menu ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-menu li:hover {
+        background: #feb47b;
+    }
+
+    /* Show hamburger icon below the search bar */
+    .hamburger-menu {
+        display: block;
+    }
+}
+
+/* For larger screen sizes */
+@media (min-width: 769px) {
+    /* Display the navigation menu and hide the hamburger icon */
+    .nav-menu ul {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+
+    /* Keep the Employee Registration and Employee Listing pages visible */
+    .form-container, .listing-container {
+        display: block;
+    }
+}
