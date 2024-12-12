@@ -15,9 +15,10 @@ Welcome to the **Employee Management System**! 🎉 This web application allows 
 To get started with the **Employee Management System** locally, follow these steps:
 
 1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/your-username/employee-management-system.git
 
+  https://github.com/AnuragDeepSinha/Employee-Management-System.git
+
+  
 # 🎮 Usage
 
 **1. Employee Registration:**
