@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Employee Management System</title>
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <div class="logo-container">
+                <div class="logo-text">A</div>
+            </div>
+            <input type="text" id="search-bar" placeholder="Search Employee..." oninput="filterEmployees()">
+        </header>
+
+        <!-- Hamburger menu for mobile screens -->
+        <div class="hamburger-menu" id="hamburger-menu" onclick="toggleMenu()">&#9776;</div>
+
+        <nav class="nav-menu" id="nav-menu">
+            <ul>
+                <li onclick="showPage('registration')">Employee Registration</li>
+                <li onclick="showPage('listing')">Employee Listing</li>
+            </ul>
+        </nav>
+
+        <main id="main-content" class="main-content">
+            <!-- Registration Form -->
+            <div class="form-container" id="registration-form" style="display:none;">
+                <h2>Employee Registration</h2>
+                <form id="employee-form" onsubmit="submitForm(event)">
+                    <input type="text" id="name" placeholder="Name" required>
+                    <input type="text" id="position" placeholder="Position" required>
+                    <textarea id="about" placeholder="About" required></textarea>
+                    <input type="date" id="joining_date" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+            <!-- Employee Listing -->
+            <div class="listing-container" id="employee-listing" style="display:none;">
+                <h2>Employee Listing</h2>
+                <input type="text" id="search-list" placeholder="Search Employee..." oninput="filterEmployeesListing()">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>About</th>
+                            <th>Joining Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="employee-table-body"></tbody>
+                </table>
+                <div class="pagination">
+                    <button onclick="prevPage()">Prev</button>
+                    <button onclick="nextPage()">Next</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Anurag Deep Sinha</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
